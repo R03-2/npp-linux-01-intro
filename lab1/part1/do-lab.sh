@@ -16,17 +16,17 @@ docker exec -it clab-lab1-part1-switch ip link set eth2 master mybridge1
 docker exec -it clab-lab1-part1-switch ip link set eth3 master mybridge1
 
 
-sw   ip link add name mybridge2 type bridge
-sw   ip link set mybridge2 up
-sw   ip link set eth1 master mybridge2
-sw   ip link set eth3 master mybridge2
+docker exec -it clab-lab1-part1-switch ip link add name mybridge2 type bridge
+docker exec -it clab-lab1-part1-switch ip link set mybridge2 up
+docker exec -it clab-lab1-part1-switch ip link set eth1 master mybridge2
+docker exec -it clab-lab1-part1-switch ip link set eth3 master mybridge2
 
-sw   ip link add name mybridge4 type bridge
-sw   ip link set mybridge4 up
-sw   ip link set eth1 master mybridge4
-sw   ip link set eth4 master mybridge4
+docker exec -it clab-lab1-part1-switch ip link add name mybridge4 type bridge
+docker exec -it clab-lab1-part1-switch ip link set mybridge4 up
+docker exec -it clab-lab1-part1-switch ip link set eth1 master mybridge4
+docker exec -it clab-lab1-part1-switch ip link set eth4 master mybridge4
 
-sw   ip link add name mybridge3 type bridge
+docker exec -it clab-lab1-part1-switch ip link add name mybridge3 type bridge
 sw   ip link set mybridge3 up
 sw   ip link set eth2 master mybridge3
 sw   ip link set eth4 master mybridge3
