@@ -4,16 +4,16 @@
 # This file will get called from capture_submission.sh
 
 
-sw   ip link add name mybridge type bridge
-sw   ip link set mybridge up
-sw   ip link set eth1 master mybridge
-sw   ip link set eth2 master mybridge
+docker exec -it clab-lab1-part1-switch ip link add name mybridge type bridge
+docker exec -it clab-lab1-part1-switch ip link set mybridge up
+docker exec -it clab-lab1-part1-switch ip link set eth1 master mybridge
+docker exec -it clab-lab1-part1-switch ip link set eth2 master mybridge
 
 
-sw   ip link add name mybridge1 type bridge
-sw   ip link set mybridge1 up
-sw   ip link set eth2 master mybridge1
-sw   ip link set eth3 master mybridge1
+docker exec -it clab-lab1-part1-switch ip link add name mybridge1 type bridge
+docker exec -it clab-lab1-part1-switch ip link set mybridge1 up
+docker exec -it clab-lab1-part1-switch ip link set eth2 master mybridge1
+docker exec -it clab-lab1-part1-switch ip link set eth3 master mybridge1
 
 
 sw   ip link add name mybridge2 type bridge
